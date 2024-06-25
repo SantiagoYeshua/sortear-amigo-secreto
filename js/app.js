@@ -1,6 +1,6 @@
 let nomeAmigo = [];
 function adicionar(){
-    let amigo = document.getElementById('nome-amigo').value
+    let amigo = document.getElementById('nome-amigo').value;
 
     if(nomeAmigo.includes(amigo)){
         alert('Nome já inserido!');
@@ -20,6 +20,11 @@ function adicionar(){
 }
 
 function sortear(){
+    if(nomeAmigo.length < 4){
+        alert('Adicione no minimo 4 participantes!');
+        return;
+    }
+    
     embaralha(nomeAmigo);
     sorteados = document.getElementById('lista-sorteio');
     console.log(nomeAmigo);
